@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Ruble Burger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-burger"></i> Ruble Burger
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-3 fw-bold text-white mb-3">Hubungi Kami</h1>
+                    <p class="lead text-white-50">Kami siap melayani Anda dengan sepenuh hati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <h2 class="text-white fw-bold mb-4">Kirim Pesan</h2>
+                        <p class="text-white-50 mb-4">Ada pertanyaan atau saran? Silakan isi form di bawah ini dan kami akan segera menghubungi Anda.</p>
+                        
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="nama" class="form-label text-white">Nama Lengkap <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label text-white">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="nama@email.com" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="telepon" class="form-label text-white">Nomor Telepon</label>
+                                        <input type="tel" class="form-control form-control-lg" id="telepon" name="telepon" placeholder="+62 812 3456 7890">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="subjek" class="form-label text-white">Subjek <span class="text-danger">*</span></label>
+                                        <select class="form-select form-select-lg" id="subjek" name="subjek" required>
+                                            <option value="">Pilih Subjek</option>
+                                            <option value="reservasi">Reservasi</option>
+                                            <option value="katering">Katering & Event</option>
+                                            <option value="keluhan">Keluhan</option>
+                                            <option value="saran">Saran</option>
+                                            <option value="lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="pesan" class="form-label text-white">Pesan <span class="text-danger">*</span></label>
+                                        <textarea class="form-control form-control-lg" id="pesan" name="pesan" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label text-white-50" for="newsletter">
+                                            Saya ingin menerima update promo dan menu terbaru via email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-danger btn-lg px-5">
+                                        <i class="fas fa-paper-plane me-2"></i> Kirim Pesan
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="alert alert-success mt-4 d-none" id="successAlert" role="alert">
+                            <i class="fas fa-check-circle me-2"></i> Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda segera.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="contact-info-wrapper">
+                        <h3 class="text-white fw-bold mb-4">Informasi Kontak</h3>
+                        
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex">
+                                <div class="contact-icon bg-danger me-3">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-2">Alamat</h5>
+                                    <p class="text-white-50 mb-0">Jl. Burger No. 123, Menteng<br>Jakarta Pusat, DKI Jakarta 10310</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex">
+                                <div class="contact-icon bg-danger me-3">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-2">Telepon</h5>
+                                    <p class="text-white-50 mb-0">+62 813 172 3068 (WhatsApp)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex">
+                                <div class="contact-icon bg-danger me-3">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-2">Email</h5>
+                                    <p class="text-white-50 mb-1">inforubleburger@gmail.com</p>
+                                    <p class="text-white-50 mb-0">reservation@rubleburger.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item mb-4">
+                            <div class="d-flex">
+                                <div class="contact-icon bg-danger me-3">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-2">Jam Operasional</h5>
+                                    <p class="text-white-50 mb-1">Senin - Jumat: 10:00 - 23:00</p>
+                                    <p class="text-white-50 mb-1">Sabtu - Minggu: 09:00 - 23:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-media-section mt-5">
+                            <h5 class="text-white mb-3">Ikuti Kami</h5>
+                            <div class="social-icons d-flex gap-3">
+                                <a href="#" class="social-icon-box bg-danger">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ruble_burger/" class="social-icon-box bg-danger">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon-box bg-danger">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCQs7q-aA5tJDnMLOrgrDuKQ" class="social-icon-box bg-danger">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@kangruble" class="social-icon-box bg-danger">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section py-5">
+        <div class="container">
+            <h3 class="text-white fw-bold mb-4 text-center">Lokasi Kami</h3>
+            <div class="map-wrapper rounded overflow-hidden shadow-lg">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.82493261427999!3d-6.208763395496968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMenteng%2C%20Jakarta%20Pusat!5e0!3m2!1sen!2sid!4v1635678901234!5m2!1sen!2sid" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="text-white fw-bold mb-3">Pertanyaan yang Sering Diajukan</h3>
+                <p class="text-white-50">Temukan jawaban untuk pertanyaan umum</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Apakah menerima reservasi untuk acara besar?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50">
+                                    Ya, kami menerima reservasi untuk acara besar seperti ulang tahun, gathering perusahaan, dan acara khusus lainnya. Silakan hubungi kami minimal 3 hari sebelum acara untuk pengaturan yang lebih baik.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Apakah tersedia menu vegetarian?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50">
+                                    Tentu! Kami memiliki beberapa pilihan menu vegetarian dan vegan. Anda juga dapat melakukan kustomisasi burger sesuai preferensi diet Anda.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Apakah tersedia layanan delivery?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50">
+                                    Ya, kami bekerja sama dengan berbagai platform delivery seperti GoFood, GrabFood, dan ShopeeFood. Anda juga dapat memesan langsung melalui WhatsApp kami.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Bagaimana cara mendapatkan promo terbaru?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-white-50">
+                                    Ikuti media sosial kami atau subscribe newsletter kami untuk mendapatkan update promo terbaru, menu baru, dan penawaran eksklusif lainnya.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="text-white mb-3">
+                        <i class="fas fa-burger"></i> Ruble Burger
+                    </h4>
+                    <p class="text-white-50">Restoran burger terbaik dengan bahan berkualitas dan cita rasa yang luar biasa.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <p class="text-white-50 mb-2">
+                        <i class="fas fa-phone me-2"></i> +62 813 172 3068
+                    </p>
+                    <p class="text-white-50 mb-2">
+                        <i class="fas fa-envelope me-2"></i> inforubleburger@gmail.com
+                    </p>
+                    <p class="text-white-50">
+                        <i class="fas fa-map-marker-alt me-2"></i> Jl. Burger No. 123, Jakarta Pusat
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3">Jam Operasional</h5>
+                    <p class="text-white-50 mb-1">Senin - Jumat: 10:00 - 23:00</p>
+                    <p class="text-white-50 mb-1">Sabtu - Minggu: 09:00 - 23:00</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50">
+                <p>&copy; 2005 Ruble Burger. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const successAlert = document.getElementById('successAlert');
+            successAlert.classList.remove('d-none');
+            
+            this.reset();
+            
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(function() {
+                successAlert.classList.add('d-none');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
